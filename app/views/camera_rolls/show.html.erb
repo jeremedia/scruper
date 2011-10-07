@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @camera_roll.name %>
+</p>
+
+<p>
+  <b>Production:</b>
+  <%= @camera_roll.production_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_camera_roll_path(@camera_roll) %> |
+<%= link_to 'Back', camera_rolls_path %>

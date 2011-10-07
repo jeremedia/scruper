@@ -1,0 +1,2 @@
+module StoryboardsHelper
+end

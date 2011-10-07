@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Production:</b>
+  <%= @shoot.production_id %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @shoot.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @shoot.end_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_shoot_path(@shoot) %> |
+<%= link_to 'Back', shoots_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@shooting_day) do |f| %>
+  <% if @shooting_day.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shooting_day.errors.count, "error") %> prohibited this shooting_day from being saved:</h2>
+
+      <ul>
+      <% @shooting_day.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :shoot_id %><br />
+    <%= f.number_field :shoot_id %>
+  </div>
+  <div class="field">
+    <%= f.label :shoot_date %><br />
+    <%= f.date_select :shoot_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

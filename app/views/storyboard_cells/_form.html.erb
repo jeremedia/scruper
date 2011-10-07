@@ -1,0 +1,25 @@
+<%= form_for(@storyboard_cell) do |f| %>
+  <% if @storyboard_cell.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@storyboard_cell.errors.count, "error") %> prohibited this storyboard_cell from being saved:</h2>
+
+      <ul>
+      <% @storyboard_cell.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :storyboard_id %><br />
+    <%= f.number_field :storyboard_id %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  shoot_id: 1
+  shoot_date: 2011-10-07
+
+two:
+  shoot_id: 1
+  shoot_date: 2011-10-07

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @sound_roll.name %>
+</p>
+
+<p>
+  <b>Production:</b>
+  <%= @sound_roll.production_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_sound_roll_path(@sound_roll) %> |
+<%= link_to 'Back', sound_rolls_path %>

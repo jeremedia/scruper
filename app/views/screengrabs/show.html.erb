@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>File:</b>
+  <%= @screengrab.file %>
+</p>
+
+<p>
+  <b>Take:</b>
+  <%= @screengrab.take_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_screengrab_path(@screengrab) %> |
+<%= link_to 'Back', screengrabs_path %>

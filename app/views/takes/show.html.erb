@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Scene:</b>
+  <%= @take.scene_id %>
+</p>
+
+<p>
+  <b>Action:</b>
+  <%= @take.action %>
+</p>
+
+<p>
+  <b>Lens:</b>
+  <%= @take.lens %>
+</p>
+
+<p>
+  <b>Camera roll:</b>
+  <%= @take.camera_roll_id %>
+</p>
+
+<p>
+  <b>Sound roll:</b>
+  <%= @take.sound_roll_id %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @take.position %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @take.time %>
+</p>
+
+<p>
+  <b>Remarks:</b>
+  <%= @take.remarks %>
+</p>
+
+
+<%= link_to 'Edit', edit_take_path(@take) %> |
+<%= link_to 'Back', takes_path %>

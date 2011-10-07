@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>File:</b>
+  <%= @script.file %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @script.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @script.author_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_script_path(@script) %> |
+<%= link_to 'Back', scripts_path %>

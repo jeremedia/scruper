@@ -1,0 +1,27 @@
+<h1>Listing productions</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Total days</th>
+    <th>Client</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @productions.each do |production| %>
+  <tr>
+    <td><%= production.title %></td>
+    <td><%= production.total_days %></td>
+    <td><%= production.client_id %></td>
+    <td><%= link_to 'Show', production %></td>
+    <td><%= link_to 'Edit', edit_production_path(production) %></td>
+    <td><%= link_to 'Destroy', production, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Production', new_production_path %>

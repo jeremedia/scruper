@@ -1,0 +1,23 @@
+<h1>Listing storyboards</h1>
+
+<table>
+  <tr>
+    <th>Production</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @storyboards.each do |storyboard| %>
+  <tr>
+    <td><%= storyboard.production_id %></td>
+    <td><%= link_to 'Show', storyboard %></td>
+    <td><%= link_to 'Edit', edit_storyboard_path(storyboard) %></td>
+    <td><%= link_to 'Destroy', storyboard, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Storyboard', new_storyboard_path %>

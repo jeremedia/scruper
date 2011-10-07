@@ -1,0 +1,25 @@
+<h1>Listing screengrabs</h1>
+
+<table>
+  <tr>
+    <th>File</th>
+    <th>Take</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @screengrabs.each do |screengrab| %>
+  <tr>
+    <td><%= screengrab.file %></td>
+    <td><%= screengrab.take_id %></td>
+    <td><%= link_to 'Show', screengrab %></td>
+    <td><%= link_to 'Edit', edit_screengrab_path(screengrab) %></td>
+    <td><%= link_to 'Destroy', screengrab, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Screengrab', new_screengrab_path %>

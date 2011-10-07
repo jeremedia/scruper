@@ -1,0 +1,37 @@
+<h1>Listing takes</h1>
+
+<table>
+  <tr>
+    <th>Scene</th>
+    <th>Action</th>
+    <th>Lens</th>
+    <th>Camera roll</th>
+    <th>Sound roll</th>
+    <th>Position</th>
+    <th>Time</th>
+    <th>Remarks</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @takes.each do |take| %>
+  <tr>
+    <td><%= take.scene_id %></td>
+    <td><%= take.action %></td>
+    <td><%= take.lens %></td>
+    <td><%= take.camera_roll_id %></td>
+    <td><%= take.sound_roll_id %></td>
+    <td><%= take.position %></td>
+    <td><%= take.time %></td>
+    <td><%= take.remarks %></td>
+    <td><%= link_to 'Show', take %></td>
+    <td><%= link_to 'Edit', edit_take_path(take) %></td>
+    <td><%= link_to 'Destroy', take, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Take', new_take_path %>

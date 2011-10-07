@@ -1,0 +1,29 @@
+<%= form_for(@shoot) do |f| %>
+  <% if @shoot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shoot.errors.count, "error") %> prohibited this shoot from being saved:</h2>
+
+      <ul>
+      <% @shoot.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :production_id %><br />
+    <%= f.number_field :production_id %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.datetime_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.datetime_select :end_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

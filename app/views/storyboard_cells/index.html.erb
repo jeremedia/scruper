@@ -1,0 +1,25 @@
+<h1>Listing storyboard_cells</h1>
+
+<table>
+  <tr>
+    <th>Storyboard</th>
+    <th>Position</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @storyboard_cells.each do |storyboard_cell| %>
+  <tr>
+    <td><%= storyboard_cell.storyboard_id %></td>
+    <td><%= storyboard_cell.position %></td>
+    <td><%= link_to 'Show', storyboard_cell %></td>
+    <td><%= link_to 'Edit', edit_storyboard_cell_path(storyboard_cell) %></td>
+    <td><%= link_to 'Destroy', storyboard_cell, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Storyboard cell', new_storyboard_cell_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  number: MyString
+  script_id: 1
+  storyboard_cell_id: 1
+
+two:
+  number: MyString
+  script_id: 1
+  storyboard_cell_id: 1
